@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Vue</title>
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div id="musicApp">
+      <h1>{{ title }}</h1>
+      <input id="searchInput" type="text" v-model="term">
+
+      <input id="searchBtn" type="button" value="search" v-on:click="search()">
+
+      <div id="musicArea">
+          <div class="song" v-for="song in songs">
+            <img src="song.artworkUrl160">
+            <h2 class="songName">{{song.collectionName}}</h2>
+            <h3 class="artistName">{{song.artistName}}</h3>
+          </div>
+      </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="main.js" ></script>
+  </body>
+</html>
