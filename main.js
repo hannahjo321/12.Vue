@@ -1,18 +1,14 @@
 var mApp = new Vue ({
-  el: '#musicApp',
+  el: '#vue',
   data: {
-    title: 'Itunes App',
+    title: 'New Vue',
     term:'',
     songs: []
   },
   methods: {
     search(){
-      fetch( 'http://itunes.apple.com/search?term=' + this.term)
-      .then(data => data.JSON() )
-      .then(data => {
-        this.songs = data.results;
-        console.log(songs);
-
+      fetch()
+      .then()
       });
     }
   }
